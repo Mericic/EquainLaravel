@@ -1,0 +1,470 @@
+
+.featurette-divider
+{
+    border: 1px solid black;
+    overflow: hidden; /* Clear floats */
+}
+
+
+/* ________________________________________________________________________________________________*/
+/* ________________________________________________________________________________________________*/
+
+/* Partie header acc*/
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+html{
+
+    /*height: 8000px;*/
+}
+
+body{
+    margin: 0;
+    padding: 0 !important;
+    font-family: 'Roboto', serif;
+    background-color: #F8F8FF;
+    padding-bottom: 40px;
+    color: #5a5a5a;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+.navbar-wrapper .navbar {
+
+}
+
+/* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+    border: 0;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+    padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+    padding: 15px 20px;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+    margin-top: 10px;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 60px;
+}
+
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+
+
+
+.carousel .item {
+    height: 600px;
+}
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    max-width: 550px;
+    padding: 0 20px;
+    margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+    margin-top: 10px;
+}
+
+
+
+/* Featurettes
+   ------------------------- */
+
+.featurette-divider {
+    margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+    padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+    overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+    margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+
+
+/*
+
+RESPONSIVE CSS
+--------------------------------------------------
+*/
+@media (max-width: 979px) {
+
+    .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+    }
+    .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+    }
+
+    .carousel .item {
+        height: 500px;
+    }
+    .carousel img {
+        width: auto;
+        height: 500px;
+    }
+
+    .featurette {
+        height: auto;
+        padding: 0;
+    }
+    .featurette-image.pull-left,
+    .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .navbar-inner {
+        margin: -20px;
+    }
+
+    .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .carousel .container {
+
+    }
+    .carousel .item {
+        height: 300px;
+    }
+    .carousel img {
+        height: 300px;
+    }
+    .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+    }
+    .carousel-caption h1 {
+        font-size: 30px;
+    }
+    .carousel-caption .lead,
+    .carousel-caption .btn {
+        font-size: 18px;
+    }
+
+    .marketing .span4 + .span4 {
+        margin-top: 40px;
+    }
+
+    .featurette-heading {
+        font-size: 30px;
+    }
+    .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+}
+
+/* ________________________________________________________________________________________________*/
+/* ________________________________________________________________________________________________*/
+
+/*FIN Partie header acc */
+
+.panel-default > .panel-heading{
+    background-color : #101010;
+}
+
+.panel-title{
+    background-color : #101010;
+    color: white;
+}
+
+
+
+
+
+
+#imageHaut{
+    height: 50em;
+    overflow: hidden;
+    /*background-image: url("equain_boxs.jpg");*/
+}
+
+#imageHaut{
+    border-radius: 0% 0% 150% 150%/0% 0% 30% 30%;
+}
+
+#imageHaut video{
+    width: 100%;
+    position: relative;
+}
+
+#logo{
+    top: 0;
+    left: 0;
+    width: 20%;
+    filter: drop-shadow(1px 1px 1px black);
+    z-index: 9;
+    position: absolute;
+}
+
+#message{
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    filter: drop-shadow(1px 1px 1px black);
+    font-size: 1.2em;
+}
+
+#message p{
+    line-height: 1em;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 0;
+}
+
+.boutonRond{
+    color: black;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.btnOrange{
+    color: white;
+    background-color: #FF6633;
+}
+
+.btnBas{
+    position: relative;
+    bottom: -10px;
+
+}
+
+.enSavoirPlus{
+    width: 25%;
+}
+
+.equipe{
+    width: 100%;
+    border-bottom: 1px solid #FF6633;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.equipe img{
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    width: 15%;
+    z-index: 1;
+    float: left;
+}
+
+.infosCarres{
+    width: 45%;
+    margin-bottom: 80px;
+    height: 250px;
+    color: white !important;
+}
+
+.activites{
+    padding: 3%;
+}
+
+.enSavoirPlus, .infosCarres, .equipe, .activites{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    word-wrap: break-word;
+    /*border: 1px solid black;*/
+}
+
+.enSavoirPlus img, .activites img{
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.equipe h3{
+    color: #FF6633
+}
+
+.infosCarres p{
+    font-size: 1.3em;
+}
+
+.infosCarres h1{
+    font-size: 2em;
+}
+
+.infosCarres p, .infosCarres h1{
+    text-align: center;
+    filter: drop-shadow(1px 1px 1px black) !important;
+    font-weight: 800;
+
+}
+
+
+
+#navbar{
+    width: 80%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #663300;
+}
+
+#navbar li {
+    display: inline-block;
+    width: 16%;
+    text-align: center;
+}
+
+#navbar li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    /*padding: 8px 16px;*/
+    padding: 8px 0;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+#navbar li a:hover, .dropdown:hover .dropbtn {
+    background-color: #FF6633;
+    color: white;
+}
+
+#navbar li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #663300;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+.row{
+    margin: 0!important;
+}
