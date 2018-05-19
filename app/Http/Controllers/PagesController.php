@@ -53,12 +53,12 @@ class PagesController extends Controller
         $ElementContenuPage->save();
 
         $ContenuPage = new Contenu_elements();
-        $ContenuPage->titre_element = $Page->nom_page;
+        $ContenuPage->titre_element = $request->titrePage;
         $ContenuPage->id_element = $ElementContenuPage->id_element;
         $ContenuPage->contenu_element = $request->contenuPage;
         $ContenuPage->save();
 
-
+        return back();
 
     }
 
@@ -69,7 +69,7 @@ class PagesController extends Controller
             $this->page = 'page/'.$page;
         }
         if(Page::where('nom_page', '=', $this->page)->first()){
-            if($this->user->hasRole('Administrateur')){
+            if($this->user!=null && $this->user->hasRole('Administrateur')){
                 $this->pages = Page::get();
             }
             $this->pages = Page::get();

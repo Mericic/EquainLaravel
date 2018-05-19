@@ -56,6 +56,11 @@ class DatabaseSeeder extends Seeder
                     $contenu_elements -> id_image = $image->id;
                     $contenu_elements ->save();
             $element = new Element;
+            $element->nom_element = 'grand';
+            $element->id_page = $page->id;
+            $element->save();
+
+            $element = new Element;
                 $element->nom_element = 'petit';
                 $element->id_page = $page->id;
                 $element->save();
@@ -363,7 +368,17 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $element = new Element;
-                $element->nom_element = 'cavalerie';
+                $element->nom_element = 'chevaux';
+                $element->id_page = $page->id;
+                $element->save();
+
+                $element = new Element;
+                $element->nom_element = 'poneys';
+                $element->id_page = $page->id;
+                $element->save();
+
+                $element = new Element;
+                $element->nom_element = 'demi_Pensions';
                 $element->id_page = $page->id;
                 $element->save();
 
@@ -473,7 +488,78 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements -> id_image = $image->id;
                 $contenu_elements ->save();
 
+        $page= new Page; $page->nom_page = 'contact'; $page->save();
+            $element = new Element;
+            $element->nom_element = 'header';
+            $element->id_page = $page->id;
+            $element->save();
+                $contenu_elements = new Contenu_elements;
+                $contenu_elements -> id_element = $element->id_element;
+                $contenu_elements -> contenu_element = '<p>Parc de Miribel Jonage<br/>1 Chemin des Îles<br/>01700 Miribel</p>';
+                $contenu_elements -> titre_element = 'club équestre Equ\'Ain E.M.L.S.';
+                $image = new Images;
+                $image->lien_image = '/images/elements/00contact.jpg';
+                $image->format = 'jpg';
+                $image->nom_image = 'contact';
+                $image->save();
+                $contenu_elements -> id_image = $image->id;
+                $contenu_elements ->save();
 
+        $element = new Element;
+        $element->nom_element = 'contact';
+        $element->id_page = $page->id;
+        $element->save();
 
+        $contenu_elements = new Contenu_elements;
+        $contenu_elements -> id_element = $element->id_element;
+        $contenu_elements -> contenu_element = '';
+        $contenu_elements -> titre_element = 'Structure';
+        $contenu_elements -> lien_next = '';
+        $image = new Images;
+        $image->lien_image = '/images/elements/VueAerienneEquain.jpg';
+        $image->format = 'jpg';
+        $image->nom_image = 'vue aérienne';
+        $image->save();
+        $contenu_elements -> id_image = $image->id;
+        $contenu_elements ->save();
+
+        $contenu_elements = new Contenu_elements;
+        $contenu_elements -> id_element = $element->id_element;
+        $contenu_elements -> contenu_element = '';
+        $contenu_elements -> titre_element = 'Itinéraire';
+        $contenu_elements -> lien_next = '';
+        $image = new Images;
+        $image->lien_image = '/images/elements/maps.PNG';
+        $image->format = 'PNG';
+        $image->nom_image = 'trouvez nous sur google maps';
+        $image->save();
+
+        $contenu_elements -> id_image = $image->id;
+        $contenu_elements ->save();
+        $contenu_elements = new Contenu_elements;
+        $contenu_elements -> id_element = $element->id_element;
+        $contenu_elements -> contenu_element = '';
+        $contenu_elements -> titre_element = 'Le Grand Parc';
+        $contenu_elements -> lien_next = '';
+        $image = new Images;
+        $image->lien_image = '/images/elements/grandparc.jpg';
+        $image->format = 'jpg';
+        $image->nom_image = 'Grand Parc';
+        $image->save();
+        $contenu_elements -> id_image = $image->id;
+        $contenu_elements ->save();
+
+        $contenu_elements = new Contenu_elements;
+        $contenu_elements -> id_element = $element->id_element;
+        $contenu_elements -> contenu_element = '';
+        $contenu_elements -> titre_element = 'Le Bureau';
+        $contenu_elements -> lien_next = '';
+        $image = new Images;
+        $image->lien_image = '/images/elements/bureau.jpg';
+        $image->format = 'jpg';
+        $image->nom_image = 'vue aérienne';
+        $image->save();
+        $contenu_elements -> id_image = $image->id;
+        $contenu_elements ->save();
     }
 }

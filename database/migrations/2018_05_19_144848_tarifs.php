@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Elements extends Migration
+class Tarifs extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class Elements extends Migration
      */
     public function up()
     {
-        Schema::create('elements', function (Blueprint $table) {
-            $table->increments('id_element');
-            $table->string('nom_element');
-            $table->integer('id_page');
+        Schema::create('tarifs', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nom_tarif');
+            $table->integer('valeur');
+            $table->text('commentaire');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class Elements extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('elements');
+        Schema::dropIfExists('tarifs');
     }
 }

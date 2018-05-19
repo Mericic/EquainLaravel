@@ -33,7 +33,7 @@
                 </div>
                 @role('Administrateur')
                 <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="8">Ajouter un cheval</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="9">Ajouter un cheval</button>
                 </div>
                 @endrole
             </div>
@@ -54,7 +54,7 @@
                 </div>
                 @role('Administrateur')
                 <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="13">Ajouter un poney</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="10">Ajouter un poney</button>
                 </div>
                 @endrole
             </div>
@@ -73,7 +73,7 @@
                 @endforeach
                 @role('Administrateur')
                 <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="14">Ajouter une Demi-Pension</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="11">Ajouter une Demi-Pension</button>
                 </div>
                 @endrole
             </div>

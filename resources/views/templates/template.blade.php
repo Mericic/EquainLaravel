@@ -66,7 +66,7 @@
     </ul>
 </div>
 <img id="logo" src="{{ asset('images/logo2.png') }}">
-<div id="imageHaut" @if($header->nom_page != 'accueil') style="height: 35em !important" @endif>
+<div id="imageHaut" @if($header->nom_page != 'accueil') style="height: 35em" @endif>
     <!--<img id="imageheader" src="equain_boxs.jpg">-->
     @role('Administrateur')
     <div style="position: absolute; bottom: 50%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
@@ -86,6 +86,15 @@
     </div>
 </div>
 </header>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @yield('contenu')
 
 <footer class="footer" style="background-image: url('{{ asset("images/footer/manege_panoramique.jpg") }}'); color:white;background-size:cover;">

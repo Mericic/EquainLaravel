@@ -524,7 +524,7 @@ footer{
         background-color: #663300;
         color: white;
         border-radius: 5px;
-        z-index: 100;
+        z-index: 205;
     }
 
     .burger-opener {
@@ -536,7 +536,7 @@ footer{
         height: 50px;
         margin: 10px;
         opacity: 0; /* hide this */
-        z-index: 110; /* and place it over the hamburger */
+        z-index: 210; /* and place it over the hamburger */
         cursor: pointer;
     }
 
@@ -558,10 +558,14 @@ footer{
         padding-top: 50px;
         width: 100%;
         background-color: #663300;
-        z-index: 1;
+        z-index: 201;
         font-size: 100%;
         overflow: hidden;
+
+
     }
+
+
     #navbar ul { margin-top: 25px; }
     #navbar ul li { display: block; width: 100%; margin-left: 15px;}
     #navbar ul li a:hover { background-color: #FF6633;}
@@ -588,5 +592,9 @@ footer{
 
     #message p{
         display: none;
+    }
+
+    #imageHaut{
+        height: 18em !important;
     }
 }

@@ -28,7 +28,7 @@
 
     @role('Administrateur')
     <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="12">Ajouter une vignette.</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="15">Ajouter une vignette.</button>
     </div>
     @endrole
 
