@@ -6,19 +6,71 @@
 
 
 @section('contenu')
-    <div style="margin-top: -50px;text-align: center; display: flex; justify-content: space-around; padding:0 10%; ">
-        @foreach($petits as $petit)
-            <div class="enSavoirPlus">
-                <img src="{{ asset($petit->lien_image) }}" style="overflow: hidden">
-                <h3>{{ $petit->	titre_element }}</h3>
-                {!! $petit->contenu_element !!}
+    <div style="margin-top: -50px !important;text-align: center; display: flex; justify-content: space-around; padding:0 10%; " class="row">
+        {{--@foreach($petits as $petit)--}}
+            {{--<div class="col-md-4" style="padding: 0; margin: 0;">--}}
+                {{--<div class="enSavoirPlus">--}}
+                    {{--@role('Administrateur')--}}
+                    {{--<div style="position: absolute; top: 0%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">--}}
+                        {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalElement" data-id="{!! $petit->id_contenu_element !!}" data-lien="{{ $petit->lien_next }}" data-titre="{!! $petit->	titre_element !!}" data-contenu="{!! $petit->contenu_element !!}">mod</button>--}}
+                    {{--</div>--}}
+                    {{--@endrole--}}
+                    {{--<img src="{{ asset($petit->lien_image) }}" style="overflow: hidden">--}}
+                    {{--<h3>{{ $petit->	titre_element }}</h3>--}}
+                    {{--{!! $petit->contenu_element !!}--}}
+                    {{--<a href="{{ $petit->lien_next }}" class="boutonRond btnOrange btnBas">En savoir plus</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--@endforeach--}}
+
+
+    @foreach($petits as $petit)
+
+        <div class="card col-lg-4">
+            @role('Administrateur')
+            <div style="position: absolute; top: 0%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalElement" data-id="{!! $petit->id_contenu_element !!}" data-lien="{{ $petit->lien_next }}" data-titre="{!! $petit->	titre_element !!}" data-contenu="{!! $petit->contenu_element !!}">mod</button>
+            </div>
+            @endrole
+            <img class="card-img-top" src="{{ asset($petit->lien_image) }}" alt="Card image cap">
+            <div class="card-body">
+                <h3 class="card-title">{{ $petit->	titre_element }}</h3>
+                <p class="card-text">{!! $petit->contenu_element !!}</p>
                 <a href="{{ $petit->lien_next }}" class="boutonRond btnOrange btnBas">En savoir plus</a>
             </div>
-        @endforeach
-
-
+        </div>
+    @endforeach
 
     </div>
+
+    @role('Administrateur')
+    <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="2">Ajouter une vignette.</button>
+    </div>
+    @endrole
+
+    <div class="row">
+        @foreach($grands as $grand)
+            <div class="ActuGrand col-md-12" style="margin: 0 0 20px 0;">
+                @role('Administrateur')
+                <div style="position: absolute; top: 0%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalElement" data-id="{!! $grand->id_contenu_element !!}" data-titre="{!! $grand->	titre_element !!}" data-contenu="{!! $grand->contenu_element !!}">mod</button>
+                </div>
+                @endrole
+                <img src="{{ asset($grand->lien_image) }}">
+                <h3>{{ $grand->titre_element }}</h3>
+                {!! $grand->contenu_element !!}
+            </div>
+        @endforeach
+    </div>
+
+    @role('Administrateur')
+    <div style="background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAjoutElement" data-id_element="15">Ajouter une actu.</button>
+    </div>
+    @endrole
+
+
 
 
 

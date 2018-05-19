@@ -17,13 +17,29 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119161875-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119161875-1');
+    </script>
+
+
 </head>
 
 <body>
 <header>
+    <input class="burger-opener" type="checkbox" />
+    <div class="burger header-icon">
+        |||
+    </div>
+
     <div id="navbar">
         <ul>
-            <li @if(Request::is('/')) style="background-color: #FF6633" @endif ><a href="{{ route('accueil') }}">Accueil</a></li>
+            <li @if(Request::is('/') || Request::is('accueil')) style="background-color: #FF6633" @endif ><a href="{{ route('accueil') }}">Accueil</a></li>
             <li @if(Request::is('structure')||Request::is('equipe')||Request::is('cavalerie')||Request::is('oxer')) style="background-color: #FF6633" @endif class="dropdown">
                 <a href="javascript:void(0)" class="dropbtn">club</a>
                 <div class="dropdown-content">
@@ -42,10 +58,21 @@
                 </div>
             </li>
             <li><a href="{{--{{ route('') }}--}}">écuries</a></li>
-            <li><a href="{{--{{ route('') }}--}}">contact</a></li>
+            <li><a href="{{ route('contact') }}">contact</a></li>
         </ul>
     </div>
+    <img id="logo" src="{{ asset('images/logo2.png') }}">
+
 </header>
+{{--@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif--}}
 
 <div class="container" style="margin-top: 150px;">
     <div class="text-center">
