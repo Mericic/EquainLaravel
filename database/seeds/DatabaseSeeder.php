@@ -45,7 +45,7 @@ class DatabaseSeeder extends Seeder
                 $element->id_page = $page->id;
                 $element->save();
                     $contenu_elements = new Contenu_elements;
-                    $contenu_elements -> id_element = $element->id;
+                    $contenu_elements -> id_element = $element->id_element;
                     $contenu_elements -> contenu_element = '<p><strong>La passion du cheval</strong><br>Un instructeur formé au Cadre Noir de Saumur<br>Une équipe de 6 moniteurs diplômés et 2 élèves monitrices<br>Une grande exigence et une cavalerie adaptée pour satisfaire tous les cavaliers</p>';
                     $contenu_elements -> titre_element = 'Un centre Equestre<br>aux portes de Lyon';
                         $image = new Images;
@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
                 $element->id_page = $page->id;
                 $element->save();
                     $contenu_elements = new Contenu_elements;
-                    $contenu_elements -> id_element = $element->id;
+                    $contenu_elements -> id_element = $element->id_element;
                     $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                     $contenu_elements -> titre_element = 'Ecole d\'equitation';
                         $image = new Images;
@@ -72,7 +72,7 @@ class DatabaseSeeder extends Seeder
                     $contenu_elements ->save();
 
                     $contenu_elements = new Contenu_elements;
-                    $contenu_elements -> id_element = $element->id;
+                    $contenu_elements -> id_element = $element->id_element;
                     $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                     $contenu_elements -> titre_element = 'Le centre équestre';
                         $image = new Images;
@@ -85,7 +85,7 @@ class DatabaseSeeder extends Seeder
                     $contenu_elements ->save();
 
                     $contenu_elements = new Contenu_elements;
-                    $contenu_elements -> id_element = $element->id;
+                    $contenu_elements -> id_element = $element->id_element;
                     $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                     $contenu_elements -> titre_element = 'Les activités';
                         $image = new Images;
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
             $element->id_page = $page->id;
             $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p><strong>Une structure complète</strong><br>Un manège olympique, une carrière d\'honneur, une carrière CSO, un cross, ...</p>';
                 $contenu_elements -> titre_element = 'Structure';
                     $image = new Images;
@@ -122,7 +122,7 @@ class DatabaseSeeder extends Seeder
         $element->id_page = $page->id;
         $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Une carrière d\'honneur, une carrière CSO, un manège Olympique</p>';
                 $contenu_elements -> titre_element = 'Carrières';
                 $image = new Images;
@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '';
                 $contenu_elements -> titre_element = 'Manège';
                 $image = new Images;
@@ -148,7 +148,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Un Cross de 150 héctares</p>';
                 $contenu_elements -> titre_element = 'Cross';
                 $image = new Images;
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Plusieurs Paddocks à disposition de vos chevaux</p>';
                 $contenu_elements -> titre_element = 'Paddock';
                 $image = new Images;
@@ -181,7 +181,7 @@ class DatabaseSeeder extends Seeder
             $element->id_page = $page->id;
             $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Une équipe de 6 moniteurs diplômés et 2 élèves monitrices</p>';
                 $contenu_elements -> titre_element = 'Equipe';
                     $image = new Images;
@@ -198,7 +198,7 @@ class DatabaseSeeder extends Seeder
             $element->id_page = $page->id;
             $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Instructeur</p>';
                 $contenu_elements -> titre_element = 'Sebastien';
                 $image = new Images;
@@ -211,7 +211,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Bureau</p>';
                 $contenu_elements -> titre_element = 'Christiane';
                 $image = new Images;
@@ -224,7 +224,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Bureau</p>';
                 $contenu_elements -> titre_element = 'Henri';
                 $image = new Images;
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Moniteur</p>';
                 $contenu_elements -> titre_element = 'Morgan';
                 $image = new Images;
@@ -248,7 +248,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Moniteur</p>';
                 $contenu_elements -> titre_element = 'Dorine';
                 $image = new Images;
@@ -260,7 +260,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Moniteur</p>';
                 $contenu_elements -> titre_element = 'amandine';
                 $image = new Images;
@@ -272,7 +272,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Moniteur</p>';
                 $contenu_elements -> titre_element = 'frederic';
                 $image = new Images;
@@ -284,7 +284,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Moniteur</p>';
                 $contenu_elements -> titre_element = 'Céline';
                 $image = new Images;
@@ -296,7 +296,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Monitrice ASUL / Université</p>';
                 $contenu_elements -> titre_element = 'laurence';
                 $image = new Images;
@@ -308,7 +308,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Oxer</p>';
                 $contenu_elements -> titre_element = 'Cyrielle';
                 $image = new Images;
@@ -320,7 +320,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Oxer</p>';
                 $contenu_elements -> titre_element = 'Aurelie';
                 $image = new Images;
@@ -332,7 +332,7 @@ class DatabaseSeeder extends Seeder
                 $contenu_elements ->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Ecuries - Maréchal Férand</p>';
                 $contenu_elements -> titre_element = 'Christophe';
                 $image = new Images;
@@ -351,7 +351,7 @@ class DatabaseSeeder extends Seeder
             $element->id_page = $page->id;
             $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>cavalerie adaptée pour satisfaire tous les cavaliers</p>';
                 $contenu_elements -> titre_element = 'Cavalerie';
                     $image = new Images;
@@ -374,7 +374,7 @@ class DatabaseSeeder extends Seeder
             $element->id_page = $page->id;
             $element->save();
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<strong>de 4 à 99 ans</strong><br><p>Vous aimez l\'équitation pour le loisir ou vous souhaitez une activité sportive ?</p><p>Nous vous proposons beaucoup d\'activités</p>';
                 $contenu_elements -> titre_element = 'Des Activités pour tous à tous les âges';
                     $image = new Images;
@@ -391,7 +391,7 @@ class DatabaseSeeder extends Seeder
             $element->save();
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Poney Club';
                 $contenu_elements -> lien_next = '/activites/poney_club';
@@ -405,7 +405,7 @@ class DatabaseSeeder extends Seeder
 
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Ecole d\equitation';
                 $contenu_elements -> lien_next = '/activites/ecole_dequitation';
@@ -419,7 +419,7 @@ class DatabaseSeeder extends Seeder
 
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Equitation Sportive';
                 $contenu_elements -> lien_next = '/activites/equitation_sportive';
@@ -433,7 +433,7 @@ class DatabaseSeeder extends Seeder
 
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Universitaires';
                 $contenu_elements -> lien_next = '/activites/universitaires';
@@ -447,7 +447,7 @@ class DatabaseSeeder extends Seeder
 
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Handisport';
                 $contenu_elements -> lien_next = '/activites/handisport';
@@ -461,7 +461,7 @@ class DatabaseSeeder extends Seeder
 
 
                 $contenu_elements = new Contenu_elements;
-                $contenu_elements -> id_element = $element->id;
+                $contenu_elements -> id_element = $element->id_element;
                 $contenu_elements -> contenu_element = '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius ipsum a enim pulvinar, eu maximus turpis convallis.</p>';
                 $contenu_elements -> titre_element = 'Anniversaires - Balades';
                 $contenu_elements -> lien_next = '/activites/anniversaires_balades';

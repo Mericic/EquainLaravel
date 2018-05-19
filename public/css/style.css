@@ -22,7 +22,7 @@ html{
 }
 
 body{
-    margin: 0;
+    margin: 0 !important;
     padding: 0 !important;
     font-family: 'Roboto', serif;
     background-color: #F8F8FF;
@@ -286,7 +286,7 @@ RESPONSIVE CSS
     text-align: center;
     color: white;
     position: absolute;
-    top: 25%;
+    top: 15em;
     left: 10%;
     filter: drop-shadow(1px 1px 1px black);
     font-size: 1.2em;
@@ -297,6 +297,10 @@ RESPONSIVE CSS
     font-size: 1.2em;
     margin: 10px;
     padding: 0;
+}
+
+#message h1{
+    font-weight: 900;
 }
 
 .boutonRond{
@@ -319,10 +323,24 @@ RESPONSIVE CSS
 }
 
 .enSavoirPlus{
-    width: 25%;
+    /*width: 25%;*/
 }
 
-.equipe{
+.cavalerie{
+    border-bottom: 1px solid #FF6633;
+    padding-bottom: 5px;
+    overflow: hidden;
+    margin: 10px !important;
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.cavalerie img{
+    width: 100%
+}
+
+.equipe, .ActuGrand{
     width: 100%;
     border-bottom: 1px solid #FF6633;
     padding-bottom: 5px;
@@ -337,8 +355,16 @@ RESPONSIVE CSS
     float: left;
 }
 
+.ActuGrand img{
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    width: 30%;
+    z-index: 1;
+    float: left;
+}
+
 .infosCarres{
-    width: 45%;
+    width: 100%;
     margin-bottom: 80px;
     height: 250px;
     color: white !important;
@@ -348,7 +374,7 @@ RESPONSIVE CSS
     padding: 3%;
 }
 
-.enSavoirPlus, .infosCarres, .equipe, .activites{
+.enSavoirPlus, .infosCarres, .equipe, .activites, .ActuGrand{
     display: inline-block;
     background-color: white;
     color: black;
@@ -356,17 +382,25 @@ RESPONSIVE CSS
     text-align: center;
     border-radius: 10px;
     word-wrap: break-word;
+    padding: 0px !important;
+    margin: 10px;
     /*border: 1px solid black;*/
 }
 
-.enSavoirPlus img, .activites img{
+.enSavoirPlus img, .activites img, .card-img-top{
     overflow: hidden;
     border-radius: 10px 10px 0 0;
     width: 100%;
     z-index: 1;
 }
 
-.equipe h3{
+.card{
+    border: none;
+    color: black;
+    background-color: #11ffee00;
+}
+
+.equipe h3, .ActuGrand h3{
     color: #FF6633
 }
 
@@ -453,7 +487,7 @@ RESPONSIVE CSS
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #FF6633}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -467,4 +501,92 @@ footer{
 
 .row{
     margin: 0!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*BARRE DE NAVIGATION : COMPATIBILITE MOBILES*/
+
+.burger { display: none; }
+.burger-opener { display: none; }
+
+@media screen and (max-width: 900px) {
+    /* Mobile */
+    .burger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px;
+        display: table;
+        padding: 0 10px 3px;
+        background-color: #663300;
+        color: white;
+        border-radius: 5px;
+        z-index: 100;
+    }
+
+    .burger-opener {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 50px;
+        margin: 10px;
+        opacity: 0; /* hide this */
+        z-index: 110; /* and place it over the hamburger */
+        cursor: pointer;
+    }
+
+    .header-icon { font-size: 32px !important; }
+
+    .burger { display: block; }
+
+    #logo {
+        width: 20%; position: absolute; top: 0; left: 80%;
+    }
+
+    #navbar {
+        opacity: 0;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2%;
+        padding-top: 50px;
+        width: 100%;
+        background-color: #663300;
+        z-index: 1;
+        font-size: 100%;
+        overflow: hidden;
+    }
+    #navbar ul { margin-top: 25px; }
+    #navbar ul li { display: block; width: 100%; margin-left: 15px;}
+    #navbar ul li a:hover { background-color: #FF6633;}
+    #navbar ul li div{ width: 100%; padding: 0 15px 0 15px;}
+    #navbar ul li a {
+        margin: 10px 10px 0 10px;
+    }
+
+    .burger-opener:checked ~ #navbar {
+        display: block;
+        opacity: 1;
+    }
+    .burger-opener:checked ~ .burger { background-color: #FF6633; }
+
+
+    #message{
+        top: 20px;
+        width: 80%;
+        font-size: 1.5em;
+    }
+
+    footer .row{
+    }
+
+    #message p{
+        display: none;
+    }
 }

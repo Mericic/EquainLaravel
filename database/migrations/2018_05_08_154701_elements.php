@@ -14,9 +14,10 @@ class Elements extends Migration
     public function up()
     {
         Schema::create('elements', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_element');
             $table->string('nom_element');
             $table->integer('id_page');
+            $table->integer('lien_next');
             $table->timestamps();
         });
     }

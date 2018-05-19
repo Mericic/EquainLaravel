@@ -14,7 +14,7 @@ class ContenuElements extends Migration
     public function up()
     {
         Schema::create('contenu_elements', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_contenu_element');
             $table->string('titre_element')->nullable();
             $table->text('contenu_element')->nullable();
             $table->string('lien_next')->nullable();

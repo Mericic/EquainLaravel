@@ -19,57 +19,72 @@
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119161875-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119161875-1');
+    </script>
+
 
 </head>
 
 <body>
 
 <header>
+    <input class="burger-opener" type="checkbox" />
+    <div class="burger header-icon">
+        |||
+    </div>
 
     <div id="navbar">
-        <ul>
-            <li @if(Request::is('/')) style="background-color: #FF6633" @endif ><a href="{{ route('accueil') }}">Accueil</a></li>
-            <li @if(Request::is('structure')||Request::is('equipe')||Request::is('cavalerie')||Request::is('oxer')) style="background-color: #FF6633" @endif class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">club</a>
-                <div class="dropdown-content">
-                    <a @if(Request::is('structure')) style="background-color: #FF6633" @endif href="{{ route('structure') }}">Structure</a>
-                    <a @if(Request::is('equipe')) style="background-color: #FF6633" @endif href="{{ route('equipe') }}">Equipe</a>
-                    <a @if(Request::is('cavalerie')) style="background-color: #FF6633" @endif href="{{ route('cavalerie') }}">Cavalerie</a>
-                    <a @if(Request::is('oxer')) style="background-color: #FF6633" @endif href="{{ route('oxer') }}">L'Oxer</a>
-                </div>
-            </li>
-            <li @if(Request::is('activite')) style="background-color: #FF6633" @endif ><a href="{{ route('activite') }}">activités</a></li>
-            <li @if(Request::is('reprises')||Request::is('inscriptions_tarifs')) style="background-color: #FF6633" @endif class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">informations</a>
-                <div class="dropdown-content">
-                    <a @if(Request::is('reprises')) style="background-color: #FF6633" @endif href="{{ route('reprises') }}">Horaires des reprises</a>
-                    <a @if(Request::is('inscriptions_tarifs')) style="background-color: #FF6633" @endif href="{{ route('inscriptions_tarifs') }}">Inscriptions / Tarifs</a>
-                </div>
-            </li>
-            <li><a href="{{--{{ route('') }}--}}">écuries</a></li>
-            <li><a href="{{--{{ route('') }}--}}">contact</a></li>
-        </ul>
-    </div>
-    <div id="imageHaut" @if($header->nom_page != 'accueil') style="height: 35em !important" @endif>
-        <!--<img id="imageheader" src="equain_boxs.jpg">-->
-        @role('Administrateur')
-        <div style="position: absolute; bottom: 50%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHeader" data-id="{!! $header->id !!}" data-titre="{!! $header->titre_element !!}" data-contenu="{!! $header->contenu_element !!}">Modifier</button>
-        </div>
-        @endrole
-        @if($header->format == 'video/mp4')
-            <video loop="loop" preload="auto" autoplay="true"> <source type="video/mp4" src="{{ asset($header->lien_image) }}" /></video>
-        @else
-            <img src="{{ asset($header->lien_image) }}" style="width: 100%" alt="image header">
-        @endif
-        <img id="logo" src="{{ asset('images/logo2.png') }}">
-        <div id="message">
-            <div style="margin-bottom: 60px; word-wrap: break-word">
-                <h1>{!! $header->titre_element !!}</h1>
-                {!! $header->contenu_element !!}
+    <ul>
+        <li @if(Request::is('/') || Request::is('accueil')) style="background-color: #FF6633" @endif ><a href="{{ route('accueil') }}">Accueil</a></li>
+        <li @if(Request::is('structure')||Request::is('equipe')||Request::is('cavalerie')||Request::is('oxer')) style="background-color: #FF6633" @endif class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">club</a>
+            <div class="dropdown-content">
+                <a @if(Request::is('structure')) style="background-color: #FF6633" @endif href="{{ route('structure') }}">Structure</a>
+                <a @if(Request::is('equipe')) style="background-color: #FF6633" @endif href="{{ route('equipe') }}">Equipe</a>
+                <a @if(Request::is('cavalerie')) style="background-color: #FF6633" @endif href="{{ route('cavalerie') }}">Cavalerie</a>
+                <a @if(Request::is('oxer')) style="background-color: #FF6633" @endif href="{{ route('oxer') }}">L'Oxer</a>
             </div>
+        </li>
+        <li @if(Request::is('activite')) style="background-color: #FF6633" @endif ><a href="{{ route('activite') }}">activités</a></li>
+        <li @if(Request::is('reprises')||Request::is('inscriptions_tarifs')) style="background-color: #FF6633" @endif class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">informations</a>
+            <div class="dropdown-content">
+                <a @if(Request::is('reprises')) style="background-color: #FF6633" @endif href="{{ route('reprises') }}">Horaires des reprises</a>
+                <a @if(Request::is('inscriptions_tarifs')) style="background-color: #FF6633" @endif href="{{ route('inscriptions_tarifs') }}">Inscriptions / Tarifs</a>
+            </div>
+        </li>
+        <li><a href="{{--{{ route('') }}--}}">écuries</a></li>
+        <li><a href="{{ route('contact') }}">contact</a></li>
+    </ul>
+</div>
+<img id="logo" src="{{ asset('images/logo2.png') }}">
+<div id="imageHaut" @if($header->nom_page != 'accueil') style="height: 35em !important" @endif>
+    <!--<img id="imageheader" src="equain_boxs.jpg">-->
+    @role('Administrateur')
+    <div style="position: absolute; bottom: 50%; right: 0; z-index: 100; background-color: rgba(255,255,255,0.5); width: 25%; padding: 10px">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalHeader" data-id="{!! $header->id_contenu_element !!}" data-titre="{!! $header->titre_element !!}" data-contenu="{!! $header->contenu_element !!}">Modifier</button>
+    </div>
+    @endrole
+    @if($header->format == 'video/mp4')
+        <video loop="loop" preload="auto" autoplay="true"> <source type="video/mp4" src="{{ asset($header->lien_image) }}" /></video>
+    @else
+        <img src="{{ asset($header->lien_image) }}" style="width: 100%" alt="image header">
+    @endif
+    <div id="message">
+        <div style="margin-bottom: 60px; word-wrap: break-word">
+            <h1>{!! $header->titre_element !!}</h1>
+            {!! $header->contenu_element !!}
         </div>
     </div>
+</div>
 </header>
 @yield('contenu')
 
@@ -78,28 +93,28 @@
         <h1 class="text-center" style="color: white;">On reste en contact</h1>
     </div>
     <div class="row"  style="background-color: rgba(255, 102, 51, 0.8)">
-        <div class="col-md-3 d-flex">
-            <img class="p-6 img-fluid" src="{{ asset("images/footer/email.png") }}" alt="img_email">
-            <div class="p-6">
+        <div class="col-md-3">
+            <img class="img-responsive" src="{{ asset("images/footer/email.png") }}" alt="img_email">
+            <div class="col-xs-8">
                 <h3>MAIL</h3>
                 <p>equain@orange.fr</p>
             </div>
         </div>
-        <div class="col-md-3 ">
-            <img class="col-xs-2 img-responsive" src="{{ asset("images/footer/tel.png") }}" alt="img_email">
-            <div class="col-xs-10">
-                <h3 style="text-transform: uppercase;">téléphone</h3>
-                <p>04 78 55 23 02</p>
-            </div>
-        </div>
         <div class="col-md-3">
-            <img class="col-xs-3 img-responsive" src="{{ asset("images/footer/facebook.png") }}" alt="img_email">
-            <div class="col-xs-9">
-                <h3>FACEBOOK</h3>
-                <p>ecurie.equain</p>
-            </div>
+        <img class="col-xs-2 img-responsive" src="{{ asset("images/footer/tel.png") }}" alt="img_email">
+        <div class="col-xs-10">
+            <h3 style="text-transform: uppercase;">téléphone</h3>
+            <p>04 78 55 23 02</p>
         </div>
-        <div class="col-md-3">
+    </div>
+    <div class="col-md-3">
+        <img class="col-xs-3 img-responsive" src="{{ asset("images/footer/facebook.png") }}" alt="img_email">
+        <div class="col-xs-9">
+            <h3>FACEBOOK</h3>
+            <p>ecurie.equain</p>
+        </div>
+    </div>
+    <div class="col-md-3">
             <img class="col-xs-3 img-responsive" src="{{ asset("images/footer/adresse.png") }}" alt="img_email">
             <div class="col-xs-9">
                 <h3>ADRESSE</h3>
@@ -108,7 +123,6 @@
                 <p>1 Chemin des Iles</p>
                 <p>01700 MIRIBEL - France</p>
             </div>
-        </div>
     </div>
 </footer>
 

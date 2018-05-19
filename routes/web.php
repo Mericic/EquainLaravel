@@ -26,9 +26,14 @@ Route::get('/oxer',  'PagesController@getPage')->name('oxer');
 Route::get('/structure',  'PagesController@getPage')->name('structure');
 Route::get('/cavalerie',  'PagesController@getPage')->name('cavalerie');
 Route::get('/equipe',  'PagesController@getPage')->name('equipe');
+Route::get('/contact',  'PagesController@getPage')->name('contact');
 
-Route::post('element/modif', 'ElementsController@modifElement')->name('modifElement');
+Route::post('/elements/modif', 'ElementsController@modifElement')->name('modifElement');
+Route::post('/elements/add', 'ElementsController@addElement')->name('addElement');
+Route::post('/elements/del', 'ElementsController@delElement')->name('delElement');
 
+Route::post('/page/add', 'PagesController@addPage')->name('addPage');
+Route::get('/page/{nom_page}',  'PagesController@getPage');
 
 Route::get('/reprises', 'PagesController@getPage')->name('reprises');
 Route::get('/inscriptions_tarifs', 'PagesController@getPage')->name('inscriptions_tarifs');
